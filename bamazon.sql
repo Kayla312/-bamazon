@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS bamazon;
-CREATE database bamazon;
+DROP DATABASE IF EXISTS bamazon_DB;
+CREATE database bamazon_DB;
 
-USE bamazon;
+USE bamazon_DB;
 
 CREATE TABLE products (
   ID INT NOT NULL AUTO_INCREMENT,
@@ -9,7 +9,7 @@ CREATE TABLE products (
   department_name VARCHAR(100) NULL,
   price DECIMAL(10,2) NULL,
   stock_quantity INT (10) NULL,
-  sold INT(10) NULL,
+  sold INT(10) DEFAULT 0,
   PRIMARY KEY (ID)
 );
 
