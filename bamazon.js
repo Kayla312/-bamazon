@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
 
   // Your password
   password: "",
-  database: "ice_creamDB"
+  database: "bamazon_DB"
 });
 
 connection.connect(function(err) {
@@ -28,11 +28,4 @@ function afterConnection() {
   });
  
 }
-function queryProductsResponse() {
-    connection.query("SELECT * FROM products", function(err, res) {
-      for (var i = 0; i < res.length; i++) {
-        console.log(res[i].id + " | " + res[i].product_name + " | " + res[i].department_name + " | " + res[i].price + " | " + res[i].stock_quantity + " | "+ res[i].sold );
-      }
-      console.log("-----------------------------------");
-    });
-  }
+
