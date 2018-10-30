@@ -21,11 +21,10 @@ connection.connect(function(err) {
 });
 
 function afterConnection() {
-  connection.query("SELECT * FROM products", function(err, res) {
+  connection.query("SELECT ID, product_name, price FROM products", function(err, res) {
     if (err) throw err;
     console.table(res);
     connection.end();
   });
  
 }
-
