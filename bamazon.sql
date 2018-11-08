@@ -4,7 +4,7 @@ CREATE database bamazon_DB;
 USE bamazon_DB;
 
 CREATE TABLE products (
-  ID INT NOT NULL AUTO_INCREMENT,
+  ID INT AUTO_INCREMENT,
   product_name VARCHAR(100) NULL,
   department_name VARCHAR(100) NULL,
   price DECIMAL(10,2) NULL,
@@ -13,6 +13,8 @@ CREATE TABLE products (
   PRIMARY KEY (ID)
 );
 
+ALTER TABLE products,
+DROP index;
 SELECT * FROM  products;
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)

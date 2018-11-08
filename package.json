@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/Kayla312/-bamazon#readme",
   "dependencies": {
-    "mysql": "^2.16.0"
+    "console.table": "^0.10.0",
+    "inquirer": "^6.2.0",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.6"
   }
 }
